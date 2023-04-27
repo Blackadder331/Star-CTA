@@ -1,0 +1,105 @@
+@font-face {
+  font-family: "Grapik Bold";
+  src: url(./fonts/Graphik-Bold-Trial.otf);
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* min-height: 100vh; */
+  display: flex;
+  margin: 0;
+  background-color: #222;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+sup {
+    font-size: 22px;
+    margin-right: -1rem;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.main {
+  flex-direction: column;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  overflow-y: scroll;
+
+}
+
+section {
+  display: flex;
+  position: relative;
+  scroll-snap-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#star-svg {
+  width: 206px;
+  height: 206px;
+}
+
+circle {
+  fill: #4caf50;
+  stroke: #4caf50;
+  stroke-width: 0.5;
+  transition: all 0.4s ease;
+  fill: #00ff24;
+}
+
+.two svg circle {
+    fill: cyan;
+}
+
+.three svg circle {
+    fill: #ff00c3;
+}
+
+button:hover circle {
+  stroke-width: 0;
+  fill: #ff8806;
+  clip-path: circle(50% at 50% 50%);
+}
+
+button:hover .button-text {
+    scale: 1.2;
+    transition: .4s ease-out;
+}
+  
+
+
+.button-text {
+  font-family: "Grapik Bold";
+  position: absolute;
+  text-decoration: none;
+  color: #222;
+  font-size: 2rem;
+  font-weight: bold;
+  z-index: 5;
+  line-height: 1;
+
+  scale: 1;
+  transition: .2s ease-in;
+}
